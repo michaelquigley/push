@@ -1,0 +1,24 @@
+# Push configuration
+# Linux: ~/.config/push/config.yaml
+# Windows: %APPDATA%\push\config.yaml
+
+# Filesystem depot root. This can be a shared mount, synced directory, or any
+# path where build artifacts are published in push's depot layout.
+depot: /mnt/push
+
+# Default install path for all builds. Individual builds can override it.
+install_path: ~/bin
+
+# How often to check for updates in daemon mode. Defaults to 5m.
+# interval: 5m
+
+# Override state directory. Defaults to a push/state directory under the user
+# config directory.
+# state_dir: ~/.local/state/push
+
+# Builds to track.
+builds:
+  - name: myapp
+
+  - name: tools
+    install_path: ~/opt/tools
