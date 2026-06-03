@@ -64,7 +64,10 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: push-linux-amd64
+      - name: name archive with ref tag
+        run: mv push-linux-amd64.tar.gz "push-${{ github.ref_name }}-linux-amd64.tar.gz"
       - uses: softprops/action-gh-release@v2
         with:
-          files: push-linux-amd64.tar.gz
+          files: push-${{ github.ref_name }}-linux-amd64.tar.gz
           fail_on_unmatched_files: true
+          draft: true
