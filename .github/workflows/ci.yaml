@@ -50,7 +50,7 @@ jobs:
             exit 1
           fi
       - name: package artifact
-        run: tar -czf push-linux-amd64.tar.gz push README.md LICENSE 2>/dev/null || tar -czf push-linux-amd64.tar.gz push README.md
+        run: tar -czf push-linux-amd64.tar.gz push README.md CHANGELOG.md LICENSE
       - uses: actions/upload-artifact@v4
         with:
           name: push-linux-amd64
