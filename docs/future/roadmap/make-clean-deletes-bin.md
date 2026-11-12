@@ -1,6 +1,6 @@
 ---
 title: make clean deletes /bin
-state: inbox
+state: horizon
 created: 2026-08-13
 tags: [defect]
 ---
